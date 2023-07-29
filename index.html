@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .btn-single-line {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md  bg-primary text-white justify-content-center">
+      <h1>Expense Tracker</h1>
+    </nav>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form id="expenseForm">
+            <div class="form-row align-items-center">
+              <div class="col-md-3">
+                <input
+                  type="number"
+                  id="expenseAmount"
+                  class="form-control"
+                  placeholder="Enter Expense Amount"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  id="description"
+                  class="form-control"
+                  placeholder="Description"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <select id="category" class="form-control" required>
+                  <option value="personal">Personal</option>
+                  <option value="food">Food</option>
+                  <option value="movie">Movie</option>
+                  <option value="business">Business</option>
+                  <option value="ele">Electricity</option>
+                </select>
+              </div>
+              <div class="col-md-1">
+                <button type="submit" class="btn btn-primary btn-single-line">Add Expense</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-group mt-3" id="expenseList"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
